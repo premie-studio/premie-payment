@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premie Payment ♡</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: "Prompt", sans-serif;
+
+    background-color: #7D6456;
+    background-image: radial-gradient(#FCE3E1 2px, transparent 2px);
+    background-size: 22px 22px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    color: #7D6456;
+}
+
+.wrapper {
+    width: 360px;
+    padding: 16px;
+}
+
+.card {
+    background: #FFF7F3;
+    border-radius: 26px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.25);
+}
+
+/* header */
+.header {
+    padding: 18px;
+    text-align: center;
+    background: #FCE3E1;
+    border-bottom: 2px solid #7D6456;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+/* QR */
+.image {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.image-box {
+    width: 200px;
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+    background: #FCE3E1;
+    border: 2px solid #7D6456;
+    overflow: hidden;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* account */
+.account-box {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.account-name {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.account-sub {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 6px;
+    opacity: 0.8;
+}
+
+/* bank */
+.bank {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #fff;
+    margin: 10px 16px;
+    padding: 12px;
+    border-radius: 16px;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    border: 1px solid #FCE3E1;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #FCE3E1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+.text {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.bank-name {
+    font-weight: 800;
+}
+
+.bank-number {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* button */
+.btn {
+    background: transparent;
+    border: 1px solid #7D6456;
+    color: #7D6456;
+    border-radius: 14px;
+    padding: 6px 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #7D6456;
+    color: #FFF7F3;
+}
+
+.btn:active {
+    transform: scale(0.9);
+}
+
+.btn.copied {
+    animation: glow 0.6s ease;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 0px #7D6456; }
+    50% { box-shadow: 0 0 15px #7D6456; }
+    100% { box-shadow: 0 0 0px #7D6456; }
+}
+
+/* 💎 social + ! */
+.social-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    background: #FCE3E1;
+    margin: 16px;
+    padding: 12px;
+    border-radius: 14px;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* 🔥 ! วงกลม */
+.warn-icon {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+
+    border: 2px solid #7D6456;
+    background: #FFF7F3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 900;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+<div class="card">
+
+    <div class="header">
+        <h1>Premie Payment ♡</h1>
+    </div>
+
+    <div class="image">
+        <div class="image-box">
+            <img src="premieqr.png" alt="QR Code">
+        </div>
+    </div>
+
+    <div class="account-box">
+        <div class="account-name">Aiwarin Kongkaew</div>
+    </div>
+
+    <div class="account-sub">
+        รบกวนตราจสอบชื่อบัญชีทุกครั้งก่อนโอน
+    </div>
+
+    <div class="bank">
+        <div class="icon">K+</div>
+        <div class="text">
+            <div class="bank-name">K-Plus</div>
+            <div class="bank-number">192-1-35656-7</div>
+        </div>
+        <button class="btn" onclick="copyText('192-1-35656-7', this)">คัดลอก</button>
+    </div>
+
+    <div class="bank">
+        <div class="icon">W</div>
+        <div class="text">
+            <div class="bank-name">Wallet</div>
+            <div class="bank-number">062-785-5554</div>
+        </div>
+        <button class="btn" onclick="copyText('062-785-5554', this)">คัดลอก</button>
+    </div>
+
+    <div class="social-box">
+        <span class="warn-icon">!</span>
+        facebook : nongpremkrub (เท่านั้นไม่มีเฟสอื่น)
+    </div>
+
+</div>
+</div>
+
+<script>
+function copyText(text, btn){
+    navigator.clipboard.writeText(text);
+
+    btn.innerHTML = "✔ คัดลอกแล้ว";
+    btn.classList.add("copied");
+
+    setTimeout(()=>{
+        btn.innerHTML = "คัดลอก";
+        btn.classList.remove("copied");
+    },1500);
+}
+</script>
+
+</body>
+</html>
